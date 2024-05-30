@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma por Curso</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>1r germà</th>
+                <th>2n germà</th>
+                <th>3r germà</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Infantil</td>
+                <td><input type="checkbox" value="28.3" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="28.3" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="28.3" data-afa="33" onclick="calculateTotal()"></td>
+            </tr>
+            <tr>
+                <td>1R</td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+            </tr>
+            <tr>
+                <td>2N</td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+            </tr>
+            <tr>
+                <td>3R</td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+            </tr>
+            <tr>
+                <td>4T</td>
+                <td><input type="checkbox" value="54.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="54.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="54.94" data-afa="33" onclick="calculateTotal()"></td>
+            </tr>
+            <tr>
+                <td>5E</td>
+                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
+            </tr>
+            <tr>
+                <td>6E</td>
+                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="total">Total a pagar per familia: <span id="total">0.00</span> €</div>
+
+    <script>
+        function calculateTotal() {
+            let total = 0;
+            let afaIncluded = false;
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+            checkboxes.forEach(checkbox => {
+                total += parseFloat(checkbox.value);
+                if (!afaIncluded) {
+                    total += parseFloat(checkbox.getAttribute('data-afa'));
+                    afaIncluded = true;
+                }
+            });
+            document.getElementById('total').innerText = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
