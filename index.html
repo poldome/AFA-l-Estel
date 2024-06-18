@@ -92,52 +92,52 @@
             <tr>
                 <th>Curs</th>
                 <th>1r germà</th>
-                <th>2n germà</th>
-                <th>3r germà</th>
+                <th>+1 al mateix curs</th>
+                <th>+2 al mateix curs</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Infantil</td>
-                <td><input type="checkbox" value="28.3" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="28.3" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="28.3" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="28.3" data-afa="33" data-curs="Infantil" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="28.3" data-afa="33" data-curs="Infantil" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="28.3" data-afa="33" data-curs="Infantil" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>1R</td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="1R" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="1R" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="1R" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>2N</td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="2N" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="2N" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="2N" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>3R</td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="3R" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="3R" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="47.94" data-afa="33" data-curs="3R" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>4T</td>
-                <td><input type="checkbox" value="54.94" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="54.94" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="54.94" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="54.94" data-afa="33" data-curs="4T" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="54.94" data-afa="33" data-curs="4T" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="54.94" data-afa="33" data-curs="4T" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>5E</td>
-                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" data-curs="5E" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" data-curs="5E" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" data-curs="5E" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>6E</td>
-                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="22.00" data-afa="33" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" data-curs="6E" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" data-curs="6E" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="22.00" data-afa="33" data-curs="6E" onclick="calculateTotal()"></td>
             </tr>
         </tbody>
     </table>
@@ -150,21 +150,25 @@
             let total = 0;
             let afaIncluded = false;
             const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-            let breakdownText = 'Desglossament:';
+            let breakdownText = 'Desglossament: ';
 
             checkboxes.forEach(checkbox => {
+                const curs = checkbox.getAttribute('data-curs');
                 if (!afaIncluded) {
                     total += parseFloat(checkbox.getAttribute('data-afa'));
-                    breakdownText += checkbox.getAttribute('data-afa') + '€ (AFA) + ';
+                    breakdownText += `${checkbox.getAttribute('data-afa')}€ (AFA) + `;
                     afaIncluded = true;
                 }
                 total += parseFloat(checkbox.value);
-                breakdownText += checkbox.value + '€ + ';
+                breakdownText += `${checkbox.value}€ (material - ${curs}) + `;
             });
 
             document.getElementById('total').innerText = total.toFixed(2);
             document.getElementById('breakdown').innerText = breakdownText.slice(0, -3).trim(); // Remove last " + "
         }
     </script>
+</body>
+</html>
+
 </body>
 </html>
