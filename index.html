@@ -10,7 +10,7 @@
             background-color: #f4f4f9;
             color: #333;
             padding: 20px;
-            text-align: center; /* Center content horizontally */
+            text-align: center;
         }
         table {
             width: 100%;
@@ -18,7 +18,7 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 0 auto; /* Center the table */
+            margin: 0 auto;
         }
         th, td {
             border: 1px solid #ddd;
@@ -48,13 +48,16 @@
             text-align: center;
             color: #555;
         }
+        .breakdown strong {
+            font-weight: bold;
+        }
         input[type="checkbox"] {
             transform: scale(1.5);
             margin: 10px;
         }
         .logo-container {
             display: flex;
-            justify-content: center; /* Center logos horizontally */
+            justify-content: center;
             align-items: center;
             margin-bottom: 20px;
         }
@@ -99,71 +102,126 @@
         <tbody>
             <tr>
                 <td>Infantil</td>
-                <td><input type="checkbox" value="28.3" data-curs="Infantil" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="28.3" data-curs="Infantil" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="28.3" data-curs="Infantil" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="62.00" data-afa="3,8,25.80" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="62.00" data-afa="3,8,25.80" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="62.00" data-afa="3,8,25.80" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>1R</td>
-                <td><input type="checkbox" value="47.94" data-curs="1R" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-curs="1R" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-curs="1R" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>2N</td>
-                <td><input type="checkbox" value="47.94" data-curs="2N" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-curs="2N" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-curs="2N" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>3R</td>
-                <td><input type="checkbox" value="47.94" data-curs="3R" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-curs="3R" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="47.94" data-curs="3R" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>4T</td>
-                <td><input type="checkbox" value="54.94" data-curs="4T" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="54.94" data-curs="4T" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="54.94" data-curs="4T" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>5E</td>
-                <td><input type="checkbox" value="22.00" data-curs="5E" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="22.00" data-curs="5E" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="22.00" data-curs="5E" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7,46.35" onclick="calculateTotal()"></td>
             </tr>
             <tr>
                 <td>6E</td>
-                <td><input type="checkbox" value="22.00" data-curs="6E" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="22.00" data-curs="6E" onclick="calculateTotal()"></td>
-                <td><input type="checkbox" value="22.00" data-curs="6E" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7" onclick="calculateTotal()"></td>
+                <td><input type="checkbox" value="57.00" data-afa="3,8,3,7" onclick="calculateTotal()"></td>
             </tr>
         </tbody>
     </table>
-    <div class="total">Total AFA: <span id="totalAFA">33.00</span> €</div>
-    <div class="footer">Heu de fer l'ingrés al compte: <span class="iban">ES40 0182 1867 5302 0152 7328</span><br>Amb el concepte: NOM FAMÍLIA, QUOTA</div>
-
-    <div class="total">Total Material Escolar: <span id="materialTotal">0.00</span> €</div>
-    <div class="breakdown" id="breakdown">Desglossament: </div>
-    <div class="footer">Heu de fer l'ingrés al compte: <span class="iban">ES40 0182 1867 5302 0152 7328</span><br>Amb el concepte: NOM FAMÍLIA, MATERIAL ESCOLAR</div>
+    <div class="total">Total a pagar al centre: <span id="totalEscola">0.00</span> €</div>
+    <div class="breakdown" id="breakdownEscola">Desglossament centre:</div>
+    <div class="footer">Heu de fer l'ingrés al compte: <span class="iban">ES68 3140 0001 9300 1414 2900</span><br>Amb el concepte: NOM FAMILIA, QUOTA ESCOLA</div>
+    <div class="total">Total a pagar a l'AFA: <span id="totalAFA">0.00</span> €</div>
+    <div class="breakdown" id="breakdownAFA"><strong>Desglossament AFA:</strong>
+        <br>
+        33€: Quota de l’AFA/Família<br>
+        3€: Socialització<br>
+        3€: Agenda<br>
+        7€: Llicència Anglès( Prim.)<br>
+        8€: Folis<br>
+        25,8€: INNOVAMAT (Infantil).<br>
+        46,35€: INNOVAMAT (Primària de 1er-5è)<br>
+       
+    </div>
+    <div class="footer">Heu de fer l'ingrés al compte: <span class="iban">ES40 0182 1867 5302 0152 7328</span><br>Amb el concepte: NOM FAMILIA, QUOTA AFA</div>
 
     <script>
         function calculateTotal() {
-            let materialTotal = 0;
+            let totalEscola = 0;
+            let totalAFA = 0;
+            let afaIncluded = false;
             const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-            let breakdownText = 'Desglossament: ';
-
+            let breakdownTextEscola = '<strong>Desglossament al centre:</strong> ';
+            let breakdownTextAFA = '<strong>Desglossament a l\'AFA:</strong> ';
+            let totalAfaBreakdown = {};
+        
             checkboxes.forEach(checkbox => {
-                const curs = checkbox.getAttribute('data-curs');
-                const material = parseFloat(checkbox.value);
-
-                materialTotal += material;
-                breakdownText += `${material}€ (material - ${curs}) + `;
+                totalEscola += parseFloat(checkbox.value);
+                breakdownTextEscola += `<strong>${checkbox.value}€</strong> </strong>( material i espectacle ),</strong> `;
+        
+                let afaCosts = checkbox.getAttribute('data-afa').split(',').map(cost => parseFloat(cost));
+        
+                afaCosts.forEach(cost => {
+                    if (!isNaN(cost)) {
+                        totalAFA += cost;
+                        if (totalAfaBreakdown[cost]) {
+                            totalAfaBreakdown[cost]++;
+                        } else {
+                            totalAfaBreakdown[cost] = 1;
+                        }
+                    }
+                });
+        
+                if (!afaIncluded) {
+                    totalAFA += 33.00; // Add AFA fee once
+                    afaIncluded = true;
+                }
             });
-
-            document.getElementById('materialTotal').innerText = materialTotal.toFixed(2);
-            document.getElementById('breakdown').innerText = breakdownText.slice(0, -3).trim(); // Remove last " + "
+        
+            // Mostrar detalles en la sección de la escuela
+            let escolaDetailsHTML = '<br>';
+            escolaDetailsHTML += '50€: Material Infantil<br>';
+            escolaDetailsHTML += '55€: Material Primaria<br>';
+            escolaDetailsHTML += '7€: Espectacle Anglès<br>';
+        
+            document.getElementById('totalEscola').innerText = totalEscola.toFixed(2);
+            document.getElementById('breakdownEscola').innerHTML = breakdownTextEscola.slice(0, -2) + '<br>' + escolaDetailsHTML;
+        
+            // Mostrar detalles en la sección de la AFA
+            let afaDetailsHTML = '<br>';
+            afaDetailsHTML += '33€: Quota de l’AFA/Família<br>';
+            afaDetailsHTML += '3€: Socialització<br>';
+            afaDetailsHTML += '3€: Agenda<br>';
+            afaDetailsHTML += '7€: Llicència Anglès( Prim.)<br>';
+            afaDetailsHTML += '8€: Folis<br>';
+            afaDetailsHTML += '25,8€: INNOVAMAT (Infantil).<br>';
+            afaDetailsHTML += '46,35€: INNOVAMAT (Primària de 1er-5è)<br>';
+            
+        
+            let afaBreakdownText = '';
+            for (const [cost, count] of Object.entries(totalAfaBreakdown)) {
+                afaBreakdownText += `<strong>${cost}€:</strong> x${count}, `;
+            }
+            afaDetailsHTML += afaBreakdownText.slice(0, -2); // Remove last comma
+        
+            document.getElementById('totalAFA').innerText = totalAFA.toFixed(2);
+            document.getElementById('breakdownAFA').innerHTML = breakdownTextAFA + afaBreakdownText +'<br>' + afaDetailsHTML;
         }
     </script>
 </body>
