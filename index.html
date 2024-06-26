@@ -215,7 +215,7 @@
             for (const [cost, count] of Object.entries(totalAfaBreakdown)) {
                 afaBreakdownText += `<strong>${cost}€:</strong> x${count}+ `;
             }
-            afaDetailsHTML += afaBreakdownText.slice(0, -2); // Remove last comma
+            afaDetailsHTML += afaBreakdownText.slice(0, -3); // Remove last comma
         
             document.getElementById('totalAFA').innerText = totalAFA.toFixed(2);
             document.getElementById('breakdownAFA').innerHTML = breakdownTextAFA + afaBreakdownText + afaDetailsHTML + '<br>';
