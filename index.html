@@ -195,10 +195,7 @@
             escolaDetailsHTML += '50€: Material Infantil<br>';
             escolaDetailsHTML += '55€: Material Primaria<br>';
             escolaDetailsHTML += '7€: Espectacle Anglès<br>';
-           }
-            if (breakdownTextEscola.endsWith('+ ')) {
-    breakdownTextEscola = breakdownTextEscola.slice(0, -2);
-        }
+         
             document.getElementById('totalEscola').innerText = totalEscola.toFixed(2);
             document.getElementById('breakdownEscola').innerHTML = breakdownTextEscola + '<br>';
         
