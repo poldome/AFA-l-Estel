@@ -217,7 +217,7 @@
             }
             if (afaBreakdownText.endsWith('+ ')) {
     afaBreakdownText = afaBreakdownText.slice(0, -2);
-        
+        }
             document.getElementById('totalAFA').innerText = totalAFA.toFixed(2);
             document.getElementById('breakdownAFA').innerHTML = breakdownTextAFA + afaBreakdownText + afaDetailsHTML + '<br>';
         }
