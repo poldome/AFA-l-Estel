@@ -202,7 +202,7 @@
             escolaDetailsHTML += '7€: Espectacle Anglès<br>';
         
             document.getElementById('totalEscola').innerText = totalEscola.toFixed(2);
-            document.getElementById('breakdownEscola').innerHTML = breakdownTextEscola.slice(0, -2) + '<br>' + escolaDetailsHTML;
+            document.getElementById('breakdownEscola').innerHTML = breakdownTextEscola.slice(0, -2) + '<br>';
         
             // Mostrar detalles en la sección de la AFA
             let afaDetailsHTML = '<br>';
@@ -223,7 +223,7 @@
             afaDetailsHTML += afaBreakdownText.slice(0, -2); // Remove last comma
         
             document.getElementById('totalAFA').innerText = totalAFA.toFixed(2);
-            document.getElementById('breakdownAFA').innerHTML = breakdownTextAFA + afaBreakdownText +'<br>' + afaDetailsHTML;
+            document.getElementById('breakdownAFA').innerHTML = breakdownTextAFA + afaBreakdownText +'<br>';
         }
     </script>
 </body>
