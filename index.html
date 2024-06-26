@@ -168,7 +168,7 @@
         
             checkboxes.forEach(checkbox => {
                 totalEscola += parseFloat(checkbox.value);
-                breakdownTextEscola += `<strong>${checkbox.value}€</strong> </strong>( material i espectacle )+</strong> `;
+                breakdownTextEscola += `<strong>${checkbox.value}€</strong> </strong>(material i espectacle)+</strong> `;
         
                 let afaCosts = checkbox.getAttribute('data-afa').split(',').map(cost => parseFloat(cost));
         
@@ -195,9 +195,12 @@
             escolaDetailsHTML += '50€: Material Infantil<br>';
             escolaDetailsHTML += '55€: Material Primaria<br>';
             escolaDetailsHTML += '7€: Espectacle Anglès<br>';
-        
+           }
+            if (breakdownTextEscola.endsWith('+ ')) {
+    breakdownTextEscola = breakdownTextEscola.slice(0, -2);
+        }
             document.getElementById('totalEscola').innerText = totalEscola.toFixed(2);
-            document.getElementById('breakdownEscola').innerHTML = breakdownTextEscola.slice(0, -2) + '<br>';
+            document.getElementById('breakdownEscola').innerHTML = breakdownTextEscola + '<br>';
         
             // Mostrar detalles en la sección de la AFA
             let afaDetailsHTML = '<br>';
